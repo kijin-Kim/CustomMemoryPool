@@ -19,12 +19,13 @@ namespace Memory
         
         size_t GetUsedBlockCount() const;
         double GetFragmentationRatio() const;
-
+        bool IsValidPoolPointer(void* ptr) const;
+        
     private:
         void initialize();
         void* findFreeBlock(size_t size);
         void addToFreeList(void* ptr);
-        bool validatePointer(void* ptr) const;
+        
 
     private:
         // 전체 메모리 풀 포인터
