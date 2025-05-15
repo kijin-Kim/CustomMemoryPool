@@ -6,17 +6,9 @@
 namespace Memory
 {
 #ifdef _DEBUG
-#define Assert(expression, message) \
-    if(!(expression)) \
-    { \
-        assert((expression) && (message)); \
-    }
+#define Assert(expression, message) if(!(expression)) assert((expression) && (message))
 #else
-    #define Assert(expression, message) \
-    if(!(expression)) \
-    { \
-        __assume(0); \
-    }
+    #define Assert(expression, message) if(!(expression)) __assume(0)
 #endif
 
     // 메모리 블록 헤더 구조체

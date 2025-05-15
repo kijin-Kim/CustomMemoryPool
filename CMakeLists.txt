@@ -8,11 +8,13 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # 라이브러리 타겟 설정
 add_library(CustomMemoryPool
     src/MemoryCommon.cpp
+    src/MemoryPool.cpp
 )
 
 target_sources(CustomMemoryPool 
 PUBLIC 
     include/MemoryCommon.h
+    include/MemoryPool.h
     
 )
 
